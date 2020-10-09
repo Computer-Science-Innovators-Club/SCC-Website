@@ -1,19 +1,21 @@
 body{
     height: 100%;
     font-weight: 200px;
-    background-color: #0e325c;
+    background-color: #002641;
     font-size: 15px;
     line-height: 1.8;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
 }
 
 
 /* navigation */
 .nav-links{
+    margin: 0;
     display: flex;
-    background-color: #1055a3;
+    background-color: #0055b8;
     align-items: center;
     justify-content: center;
     padding-right: 50px;
@@ -36,7 +38,7 @@ body{
     text-transform: uppercase;
     padding: 10px 50px;
     color: #000;
-    background-color: #468ee0;
+    background-color: #0068d4;
     font-weight: 500;
     transition: all .3s ease 0s;
     border-radius: 30px;
@@ -62,8 +64,38 @@ th, td {
     width: 14.2857%;
 	border: .4px solid #426075;
     font-weight: 100;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 table th {
     text-align: center;
     vertical-align: center;
 }
+.times{
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    text-align: right;
+    vertical-align: center;
+    padding-right: 10px;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    width: 50px;
+}
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #116aa6; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #116aa6; 
+  }
+/*
+ACC:#a3b317
+MAGD:#00b3a9
+CSI: #a64cb2
