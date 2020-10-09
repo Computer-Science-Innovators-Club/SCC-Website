@@ -1,54 +1,68 @@
 body{
     height: 100%;
-    font-weight: 200px;
     background-color: #002641;
     font-size: 15px;
     line-height: 1.8;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; NEVER DO overflow hidden on the body! */
 }
 
+/* prevent transitions onload (to fix jumpy padding for <a> transition) */
+.preload {
+    transition: none !important;
+}
 
 /* navigation */
-.nav-links{
+/* note: using class isn't recommended if you only have one
+nav-links assuming you're not going to reuse it
+Also, navbars are best used with position fixed or sticky, not z-index: 1
+If you have to use flex, wrap it in another div that is position: fixed */
+.nav-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav-links {
     margin: 0;
     display: flex;
     background-color: #0055b8;
     align-items: center;
     justify-content: center;
-    padding-right: 50px;
-    width: 100%;
-    z-index: 1;
+    flex-wrap: wrap;
+}
 
+.nav-links img {
+    margin: 10px;
 }
 
 .nav-links ul{
     list-style: none;
+    margin: 10px;
 }
 
 .nav-links ul li{
     display:inline-block;
-    padding: 20px 30px;
+    padding: 10px 5px;
 }
 
 .nav-links ul li a{
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 50px;
-    color: #000;
+    /* black and blue contrast sucks. use white instead */
+    color: #fff;
     background-color: #0068d4;
     font-weight: 500;
-    transition: all .3s ease 0s;
+    transition: 0.3s;
     border-radius: 30px;
-    width: 20%;
 }
 
 .nav-links ul li a:hover{
     color: #333;
     background-color: #fff;
-
 }
 
 /*table */
@@ -82,19 +96,20 @@ table th {
 
 /* scroll bar */
 
-::-webkit-scrollbar {
-    width: 50px;
+body::-webkit-scrollbar {
+    /* let's not make scrollbars 50px... */
+    width: 5px;
 }
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #116aa6; 
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #116aa6; 
-  }
+body::-webkit-scrollbar-track {
+border-radius: 1px;
+}
+body::-webkit-scrollbar-thumb {
+background: #116aa6; 
+border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+background: #116aa6; 
+}
 /*
 ACC:#a3b317
 MAGD:#00b3a9
