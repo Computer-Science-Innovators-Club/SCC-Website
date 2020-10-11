@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap');
+
 body{
     height: 100%;
-    background-color: #002641;
+    background-color: #1a1c23;
     font-size: 15px;
     line-height: 1.8;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", cursive, sans-serif;
     /* overflow: hidden; NEVER DO overflow hidden on the body! */
 }
 
@@ -14,12 +16,67 @@ body{
     transition: none !important;
 }
 
+/*Buttons*/
+.btn{
+    margin:30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display: inline;
+    /*padding: 20px 40px;*/
+    text-align: center;
+    /*
+    color:#fff;
+    font-weight: 400;
+    background-color: #2971e6;
+    
+    font-family: "Montserrat", cursive, sans-serif;
+    */
+}
+/*
+.button{
+    border-radius: 
+}
+*/
+/* Header Styling */
+.header {
+    display:block;
+    color:white;
+    text-align: center;
+    font-weight: 100;
+}
+.header h1{
+    display: inline-block;
+    font-size: 40px;
+    margin: 0px 20px;
+}
+.header h2{
+    font-size: 20px;
+    margin:0px;
+}
+
+.left, .right{
+    display: inline;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #949494;
+    border-radius: 50%;
+    padding: 5px 15px;
+}
+.left:hover, .right:hover{
+    background-color: #aaa;
+}
+
+
 /* navigation */
 /* note: using class isn't recommended if you only have one
 nav-links assuming you're not going to reuse it
 Also, navbars are best used with position fixed or sticky, not z-index: 1
 If you have to use flex, wrap it in another div that is position: fixed */
 .nav-wrapper {
+    z-index: 1;
     position: sticky;
     top: 0;
     left: 0;
@@ -73,44 +130,73 @@ table {
     width: 80%;
     color: #fff;
 } 
+
+th, .dark{
+    color: #949494;
+}
 th, td {
-    height: 50px;
+    text-align: left;
+    vertical-align: top;
+    height: 80px;
     width: 14.2857%;
-	border: .4px solid #426075;
-    font-weight: 100;
-    padding-top: 10px;
-    padding-bottom: 10px;
+	/*border: .4px solid #426075;  --> it looks better without the border*/
+    font-weight: 200;
+    padding: 5px 5px;
 }
-table th {
-    text-align: center;
-    vertical-align: center;
+.today{
+    padding: 6px 12px; 
+    border-radius: 50%;
+    background-color: #323f56;
 }
-.times{
-    border-left: 0px;
-    border-top: 0px;
-    border-bottom: 0px;
-    text-align: right;
-    vertical-align: center;
-    padding-right: 10px;
-}
+
 
 /* scroll bar */
-
 body::-webkit-scrollbar {
-    /* let's not make scrollbars 50px... */
     width: 5px;
 }
 body::-webkit-scrollbar-track {
 border-radius: 1px;
 }
 body::-webkit-scrollbar-thumb {
-background: #116aa6; 
+background-color: #116aa6; 
 border-radius: 10px;
 }
 body::-webkit-scrollbar-thumb:hover {
-background: #116aa6; 
+background-color: #116aa6; 
+}
+
+/*Day-specific schedule*/
+.col-1{
+    display:block;
+}
+.col-2{
+    display: block;
+    position: relative;
+}
+.col-2-1{
+    z-index:-1;
+    width: 33%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #2b497a;
+    color: #fff;
+    text-align:left;
+    padding: 0px 10px;
+}
+h1{
+    display:block;
+    margin: 0;
+    font-size:30px;
+}
+
+.day{
+    letter-spacing: 1rem;
+    font-size: 170px;
+    padding: 7px;
+    line-height:1;
 }
 /*
 ACC:#a3b317
 MAGD:#00b3a9
 CSI: #a64cb2
+*/
