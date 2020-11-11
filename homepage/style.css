@@ -1,3 +1,16 @@
 body {
     background-color: black;
 }
+
+.header {
+    height: 25%;
+    border-bottom: 5px solid red;
+}
+
+.header > .logo {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    clip: rect(0, 1078px, 574px, 0);
+}
