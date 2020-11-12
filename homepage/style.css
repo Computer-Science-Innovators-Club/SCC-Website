@@ -4,7 +4,7 @@ body {
 
 .header {
     height: 25%;
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid rgb(0, 255, 255);
 }
 
 .header > .logo {
@@ -13,4 +13,5 @@ body {
     margin-left: auto;
     margin-right: auto;
     clip: rect(0, 1078px, 574px, 0);
+    fill: black;
 }
