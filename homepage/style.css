@@ -22,7 +22,7 @@ body {
     margin-right: auto;
     clip: rect(0, 1078px, 574px, 0);
     fill: black;
-    background: linear-gradient(45deg, #330000, red, #330000);
+    background: linear-gradient(45deg, #110000, red, #110000);
 }
 
 .divider {
