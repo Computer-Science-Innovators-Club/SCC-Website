@@ -62,12 +62,28 @@ body {
 }
 
 .sticky {
-    text-decoration: none;
+    list-style-type: none;
     margin-left: auto;
     margin-right: auto;
-    min-height: 15vw;
-    max-height: 15vw;
-    width: 15vw;
+    min-height: 20vw;
+    max-height: 20vw;
+    width: 20vw;
     background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ddaaaa), color-stop(82%,#ddaaaa), color-stop(82%,#ddaaaa), color-stop(100%,#ddcccc));
     border-bottom-right-radius: 60px 5px;
+    padding: 2%;
+}
+
+#accSticky {
+    float: left;
+    width: 33.333%;
+}
+
+#magdSticky {
+    float: right;
+    width: 33.333%;
+}
+
+#csiSticky {
+    display: inline-block;
+    width: 33.333%;
 }
