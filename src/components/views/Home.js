@@ -1,7 +1,8 @@
 import React from 'react';
 import '../../App.css';
-import Logo2 from '../../public/SCC.png';
+import Logo2 from '../../public/full-scc-logo.png';
 // import discord from '../../public/discord.png';
+
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
                 </div>
                 <div className = "line-1">
                 </div>
-                <div className = "event-card-text">
+                <div className = "event-card-text">2
                     <p>Monday at 3: 00p.m.
                         USACO Practice Problem Stuff
                         Doing something with coding</p>
@@ -161,7 +162,13 @@ function Home() {
             </div>
     </div>
         </div>
-        </div></div>
+        </div>
+        
+        <div className = "quote-section">
+            <img class = "logo2" src={Logo2} alt = "logo"></img>
+            <h1>"The only work worth doing is coding" - Nelson Mandela</h1>
+            </div>
+        </div>
   );
 }
 

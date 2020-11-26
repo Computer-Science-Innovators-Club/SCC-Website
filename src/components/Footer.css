@@ -1,11 +1,10 @@
 .footer-container{
+    background-color: #1F273C;
     padding: 2rem 1rem 0rem 2rem;
-    background-color: #161A2A;
 }
 
 .footer{
     display: flex;
-    /* background-color: #000; */
     color: #fff;
 }
 

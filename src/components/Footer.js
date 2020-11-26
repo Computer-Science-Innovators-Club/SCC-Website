@@ -9,11 +9,11 @@ function Footer() {
         <div className = "footer-container">
             <div className = "footer">
                 <div className = "footer-1">
-                    <img className = "footer-logo" src = {Logo} alt = "SCC"></img>
                     <div class = "footer-text">
                         <p>southcodingclub@gmail.com</p>
                         <p>WWP High School South</p>
                     </div>
+                    {/* <img className = "footer-logo" src = {Logo} alt = "SCC"></img> */}
                 </div>
 
                 <ul className = "footer-2">

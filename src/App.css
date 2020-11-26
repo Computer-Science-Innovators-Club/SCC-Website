@@ -14,6 +14,7 @@ html{
 
 .content-wrapper{
   display:flex;
+  flex-direction: row;
 }
 
 .col-3{
@@ -21,8 +22,7 @@ html{
   flex-direction: column;
   padding: 0 20px;
   justify-content: center;
-  max-width: 33%;
-  flex: 3;
+  flex: 1;
 }
 
 .heading{
@@ -37,8 +37,10 @@ html{
   background-color: #1F273C;
   padding: .5rem 1rem 2rem 1rem;
   margin-bottom: 20px;
-  width: 315px;
-  height: 139.23px;
+  /* width: 315px;
+  height: 139.23px; */
+  width:100%;
+  height:100%;
 }
 .discord{    
    display: flex;
@@ -99,7 +101,7 @@ html{
   line-height: 2;
 }
 .col-9-wrapper{
-  height: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +110,7 @@ html{
   flex: 1;
   display: flex;
   align-items: stretch;
-  max-height: 70%;
+  max-height: 100%;
   justify-content: space-between;
 }
 .club-card{
@@ -119,10 +121,12 @@ html{
   padding: 10px 1rem;
   text-align: center;
   width: 30%;
-  /* height: 374px; */
   height: 100%;
   box-sizing: border-box;
   position: relative;
+}
+.club-card-text{
+  margin-bottom:2rem;
 }
 .logo{
   margin: 0 auto;
@@ -187,23 +191,27 @@ html{
 }
 .col-wrapper{
   margin: 0 15px;
-  width: 100%;
+  flex:2;
   display:flex;
   flex-direction: column;
-
   justify-content: left;
+  padding: 0 1rem;
 }
 
 /* Leaderboard section */
 .leaderboard-wrapper{
   width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
 }
 .leaderboard{
   background-color: #1F273C;
   display:flex;
   align-items:flex-end;
   justify-content: space-evenly;
-  padding: 5rem 0 1rem 0;
+  /* padding: 5rem 0 1rem 0; */
+  height:100%;
 }
 .place{
   width: 25%;
@@ -211,33 +219,30 @@ html{
   position:relative;
 }
 .place-1st{
-  min-height: 120px;
+  min-height: 80%;
   background-color: #00B3A9;
 }
-.place-1st p{
-  margin-right: 5px;
-}
 .place-2nd{
-  min-height: 100px;
+  min-height: 50%;
   background-color: #A64CB2;
 }
 .place-3rd{
-  min-height: 50px;
+  min-height: 30%;
   background-color: #4A63F6;
-}
-.place-text-inner{
-  position:absolute;
-  color: #fff;
-  left: 50%;
-  top:30%;
-  transform: translateX(-50%);
 }
 
 .place-text-outer{
   position:absolute;
   color: #fff;
   left: 50%;
-  top: -1.5rem;
+  top:10%;
+  transform: translateX(-50%);
+}
+
+.place-text-outer{
+  position:absolute;
+  color: #fff;
+  top: 50%;
   transform: translateX(-50%);
 }
 .outer-1{
@@ -285,10 +290,22 @@ html{
 @media screen and (max-width: 900px) {
   .content-wrapper{
       flex-direction: column;
+      
+  }
+  .col-wrapper{
+    margin:0;
+  };
+  .container{
+
+    overflow: hidden;
   }
   .event-card{
-      width: 400px;
-      height: 170px;
+      /* width: 400px;
+      height: 170px; */
+      width:100%;
+  }
+  .heading{
+    text-align:center;
   }
   .col-9{
       flex-direction: column;
@@ -296,41 +313,86 @@ html{
 
   }
   .club-card{
-      width: 500px;
-      height: 150px;
+      width: 100%;
+      height: 100%;
       margin-bottom: 20px;
       display:flex;
       justify-content: center;
   }
-  /* .nav-section{
-      display:none;
+  .discord-e{
+    width: 100%;
+    box-sizing:border-box;
+    margin-bottom: 20px;
+
   }
-  .navbar-toggler{
-      display:block;
-      margin-right: 0;
+  .event-card{
+    max-width:100%;
+    max-height:100%;
+    box-sizing:border-box;
   }
-  .navbar-toggler i{
-      display:none;
+
+  .heading-section{
+    text-align:center;
+    display:block;
   }
-  .nav-section .responsive{
-      display: block;
+
+  .quote-section h1{
+    font-size:15px;
   }
-  .logo svg
-  {
-      width: 150px;
+
+
+  .place-text-inner{
+    position:relative;
+    font-size: 50%;
   }
-  .logo{
-      margin: 0;
+
+  .leaderboard{
+    flex-direction:column;
+    justify-content:space-around;
+    width:100%;
+    height:100%;
+    padding: .5rem 0;
+    align-items:space-around;
   }
-  nav{
-      display:flex;
-      justify-content: space-between;
-      margin-top: 0;
-  } */
+  .place{
+    margin: 10px 0;
+    min-height: 25px;
+    padding: 15px 0;
+  }
+  .place-2nd{
+    min-width: 50%;
+  }
+  .place-1st{
+    min-width: 75%;
+  }
+  .place-3rd{
+    min-width: 25%;
+  }
+
+  .place-text-outer{
+    position: absolute;
+    font-size: 50%;
+    top: 50%;
+    left:-20px;
+    transform: translateX(-70%);
+  }
+  
 }
 
 .logo-2{
   display: flex;
   justify-content: center;
+  width:100%;
 }
 
+.quote-section{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.quote-section h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+}
