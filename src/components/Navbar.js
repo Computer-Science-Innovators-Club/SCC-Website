@@ -37,7 +37,7 @@ function Navbar() {
                             <img src={Logo} alt = "logo"></img>
                         </Link>
                     </div>
-                    <div class = "nav-section">
+                    <div className = "nav-section">
                     <li className = "nav-item">
                         <Link to = "/calendar" className = 'nav-links' onClick = {closeMobileMenu}>Calendar</Link>
                     </li>

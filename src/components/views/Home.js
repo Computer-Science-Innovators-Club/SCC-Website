@@ -16,7 +16,7 @@ function Home() {
                 </div>
                 <div className = "line-1">
                 </div>
-                <div className = "event-card-text">2
+                <div className = "event-card-text">
                     <p>Monday at 3: 00p.m.
                         USACO Practice Problem Stuff
                         Doing something with coding</p>
@@ -37,7 +37,7 @@ function Home() {
             </div>
             <div className = "event-card">
                 <div className = "event-card-title">
-                    <h1>ACC Meeting</h1>
+                    <h1>MAGD Meeting</h1>
                 </div>
                 <div className = "line-3">
                 </div>
@@ -133,31 +133,36 @@ function Home() {
                     <h1 className = "heading heading-2">See Full Leaderboard</h1>
                 </div>
                 <div className = "leaderboard">
-                    <div className = "place place-2nd">
-                        <div className = "place-text-outer">
-                            <p>2nd Place</p>
-                        </div>
-                        <div className = "place-text-inner">
-                            <p>1000 points</p>
-                        </div>
+
+                    <div className = "place-wrapper">
+                            <div className = "place-text-outer">
+                                <p>2nd Place</p>
+                            </div>
+                            <div className = "place-text-inner place-2">
+                                <p>1000 points</p>
+                            </div>
                     </div>
-                    <div className = "place place-1st">
-                        <div className = "place-text-outer">
-                            <p>1st Place</p>
-                            
-                        </div>
-                        <div className = "place-text-inner">
-                            <p>1500 points</p>
-                        </div>
+
+
+                    <div class = "place-wrapper">
+                            <div className = "place-text-outer">
+                                <p>1st Place</p>
+                                
+                            </div>
+                            <div className = "place-text-inner place-1">
+                                <p>1500 points</p>
+                            </div>
                     </div>
-                    <div className = "place place-3rd">
-                        <div className = "place-text-outer">
-                            <p>3rd Place</p>
-                        </div>
-                        <div className = "place-text-inner">
-                            <p>500 points</p>
-                        </div>
+
+                    <div className = "place-wrapper">
+                            <div className = "place-text-outer">
+                                <p>3rd Place</p>
+                            </div>
+                            <div className = "place-text-inner place-3">
+                                <p>500 points</p>
+                            </div>
                     </div>
+                        
                 </div>
             </div>
     </div>
@@ -165,7 +170,7 @@ function Home() {
         </div>
         
         <div className = "quote-section">
-            <img class = "logo2" src={Logo2} alt = "logo"></img>
+            <img src={Logo2} alt = "logo"></img>
             <h1>"The only work worth doing is coding" - Nelson Mandela</h1>
             </div>
         </div>
