@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 import Logo from "../public/SCC.png";
 
+
 function Footer() {
 
     return (

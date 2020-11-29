@@ -14,8 +14,12 @@ body{
   color: #fff;
   padding: .8rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
+.home{
+  display:none;
+}
 .content-wrapper{
   display:flex;
   flex-direction: row;
@@ -25,6 +29,7 @@ body{
   display: flex;
   flex-direction: column;
   padding: 0 20px;
+  flex:1;
   justify-content: center;
   align-items: center;
 }
@@ -43,34 +48,11 @@ body{
   margin-bottom: 20px;
   width:100%;
   height:100%;
-}
-
-.discord{    
-   display: flex;
-  justify-content: center;
-  margin-bottom: 0;
-  background-color: #1F273C;
-  width: 315px;
-  /* height: 100%; */
-  flex-direction: column;
-  padding: 1rem;
-  text-align:center;
+  box-sizing: border-box;
 }
 .discord-e{
+  min-height: 300px;
   width:100%;
-}
-.discord-embed{
-  display:block;
-  margin: 0 auto;
-  width:100%;
-}
-.discord p{
-  margin: 0px 0px .5rem 0px;
-  line-height: 2;
-}
-
-.discord .img{
-  flex: 1;
 
 }
 .img img{
@@ -115,6 +97,7 @@ body{
   align-items: stretch;
   max-height: 100%;
   justify-content: space-between;
+  flex-wrap:wrap;
 }
 .club-card{
   background-color: #1F273C;
@@ -127,6 +110,13 @@ body{
   height: 100%;
   box-sizing: border-box;
   position: relative;
+}
+
+.csi-logo{
+  width:50%;
+}
+.magd-logo{
+  width: 70%;
 }
 .club-card-text{
   margin-bottom:2rem;
@@ -155,38 +145,36 @@ body{
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 
 .place-text-outer{
   display:flex;
-  flex:1;
   justify-content:center;
   align-items:flex-end;
   width:100%;
-  height:100%;
 }
-.place-text-inner{
-  height:100%;
+.place-text-outer p{
+  margin:0 0 5px 0;
 }
 .place-1{
-  flex:2;
   width:100%;
   background-color: #4A63F6;
   text-align:center;
+  height: 75%;
 }
 .place-2{
-  flex:1;
   width:100%;
   background-color: #23B3A8;
   text-align:center;
+  height: 50%;
 }
 .place-3{
-  flex:.5;
   width:100%;
   background-color: #A74CB2;
   text-align:center;
+  height: 25%;
 }
 
 .fl-right{
@@ -204,6 +192,10 @@ body{
 .heading-2{
   color:#aaa;
   font-size: 20px;
+  background-color:rgba(0,0,0,0);
+  border:none;
+  outline:none;
+  cursor:pointer;
 }
 .quote{
   text-align: center;
@@ -239,7 +231,7 @@ body{
 }
 
 .col-wrapper{
-  margin: 0 15px;
+  /* margin: 0 15px; */
   flex:2;
   display:flex;
   flex-direction: column;
@@ -336,13 +328,8 @@ line-height: 22px;
       justify-content: center;
       text-align: center;
       align-items: center;
+      
   }
-  .discord-e{
-    box-sizing:border-box;
-    margin-bottom: 20px;
-    max-width:80%;
-  }
-
   .heading-section{
     text-align:center;
     display:block;
